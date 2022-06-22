@@ -3,5 +3,5 @@
 ## Описание файлов
 Загружены только gulp-файлы и тема сайта 
 
-1. В файле [req.php](src/wp-content/themes/theme/mail/req.php) скрыт доступ к SMTP серверу отправки, для конфиденциальности
-2. В файле [acf-fields.php](acf/acf-fields.php) находятся все произвольные поля настренные в плагине ACF, для управления контентом сайта 
+1. В файле [acf-fields.php](acf/acf-fields.php) находятся все произвольные поля настренные в плагине ACF, для управления контентом сайта 
+2. Стоит обратить внимание на [реализацию карту с адресами секонд-хендов](https://lepta.info/second-hands/). Код в файле: [addresses.php](src/wp-content/themes/theme/template-parts/blocks/second-hands/addresses.php) 
