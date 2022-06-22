@@ -1,5 +1,5 @@
 # Lepta
-[lepta.info](https://lepta.info/)
+[lepta.info](https://lepta.info/){:target="_blank"}
 ## Описание файлов  
 Загружены только gulp-файлы и тема сайта 
 
