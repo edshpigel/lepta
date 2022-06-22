@@ -1,5 +1,5 @@
 # Lepta
-<a href="https://lepta.info" target="_blank">lepta.info</a>
+[lepta.info](https://lepta.info/)
 ## Описание файлов
 Загружены только gulp-файлы и тема сайта 
 
