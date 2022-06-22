@@ -1,0 +1,46 @@
+.form-give {
+    @include media-breakpoint-up(lg) {
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+    @include media-breakpoint-up(xs) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    &__wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        @include media-breakpoint-up(lg) {
+            padding: 90px 40px;
+        }
+        @include media-breakpoint-up(xs) {
+            padding: 60px 10px;
+        }
+        &__figure {
+            position: absolute;
+            z-index: -2;
+            svg {
+                width: auto;
+                @include media-breakpoint-up(lg) {
+                    height: 226px;
+                }
+                @include media-breakpoint-down(md) {
+                    height: 150px;
+                }
+            }
+        }
+    }
+    h2 {
+        text-align: center;
+    }
+    &__bg {
+        position: absolute;
+        z-index: -5;
+        inset: 0 0 0 0;
+        background-color: #a4a545;
+        border-radius: 4px;
+    }
+}

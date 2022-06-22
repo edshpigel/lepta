@@ -1,0 +1,84 @@
+.where-going {
+    position: relative;
+    @include media-breakpoint-up(lg) {
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+    @include media-breakpoint-up(xs) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 40px;
+        @include media-breakpoint-down(md) {
+            margin-bottom: 25px;
+        }
+    }
+    &__rep {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    @include media-breakpoint-down(lg) {
+        .container-wrapper {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    &__item {
+        @include media-breakpoint-up(lg) {
+            flex: 0 1 25%;
+            max-width: 25%;
+        }
+        @include media-breakpoint-down(md) {
+            flex: 0 1 50%;
+            max-width: 50%;
+            margin-bottom: 30px;
+        }
+        @include media-breakpoint-down(xs) {
+            flex: 0 1 100%;
+            max-width: 100%;
+        }
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        &__num {
+            margin-top: 72px;
+            @include media-breakpoint-down(md) {
+                margin-top: 50px;
+            }
+        }
+        &__wrapper {
+            flex-grow: 1;
+        }
+        &__icon {
+            width: auto;
+            @include media-breakpoint-down(lg) {
+                height: 72px;
+            }
+            @include media-breakpoint-down(md) {
+                height: 50px;
+            }
+        }
+        &__heading {
+            margin-top: 10px;
+            font-size: 18px;
+            text-transform: uppercase;
+            color: $color-text;
+            font-weight: bold;
+            @include media-breakpoint-down(md) {
+                font-size: 16px;
+            }
+        }
+        .h2 {
+            color: #DCA852;
+            font-weight: normal;
+            margin-right: 16px;
+            @include media-breakpoint-down(md) {
+                margin-right: 8px;
+            }
+        }
+    }
+}

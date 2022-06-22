@@ -1,0 +1,159 @@
+.save-legacy {
+    position: relative;
+    @include media-breakpoint-up(lg) {
+        padding-top: 60px;
+    }
+    @include media-breakpoint-up(xs) {
+        padding-top: 60px;
+    }
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 80px;
+        @include media-breakpoint-down(md) {
+            margin-bottom: 40px;
+        }
+        h2 {
+            text-align: center;
+        }
+        &__figure {
+            position: absolute;
+            z-index: -1;
+            .figure-svg-base {
+                &.figure-select-brush {
+                    transform: rotateY(180deg);
+                }
+                svg {
+                    height: auto;
+                    @include media-breakpoint-up(lg) {
+                        width: 316px;
+                    }
+                    @include media-breakpoint-up(xs) {
+                        width: 180px;
+                    }
+                }
+            }
+        }
+    }
+    &__grid {
+        display: grid;
+        position: relative;
+        gap: 67px 67px;
+        grid-auto-flow: row;
+        max-width: 1150px;
+        margin: 0 auto;
+        @include media-breakpoint-up(xlg) {
+            gap: 67px 67px;
+        }
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: minmax(220px, 34%) minmax(220px, 21%) 1fr;
+            grid-template-areas:
+                "save-legacy__text save-legacy__image__2 save-legacy__image__3"
+                "save-legacy__image__1 save-legacy__image__2 save-legacy__image__3"
+                "save-legacy__image__1 save-legacy__image__4 save-legacy__image__4"
+                ". save-legacy__image__4 save-legacy__image__4";
+            gap: 45px 45px;
+        }
+        @include media-breakpoint-down(md) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "save-legacy__text save-legacy__image__2"
+                "save-legacy__image__1 save-legacy__image__2"
+                "save-legacy__image__1 save-legacy__image__3"
+                "save-legacy__image__4 save-legacy__image__3"
+                "save-legacy__image__4 .";
+            gap: 25px 25px;
+        }
+        @include media-breakpoint-down(sm) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "save-legacy__text save-legacy__text"
+                "save-legacy__image__1 save-legacy__image__2"
+                "save-legacy__image__1 save-legacy__image__3"
+                "save-legacy__image__4 save-legacy__image__3"
+                "save-legacy__image__4 .";
+            gap: 15px 15px;
+        }
+        .save-legacy__text {
+            grid-area: save-legacy__text;
+            font-size: 16px;
+        }
+        .save-legacy__image__1,
+        .save-legacy__image__2,
+        .save-legacy__image__3,
+        .save-legacy__image__4 {
+            display: flex;
+            align-items: flex-start;
+            @include media-breakpoint-down(md) {
+                align-items: stretch;
+                img {
+                    height: 100%;
+                }
+            }
+            img {
+                border-radius: 4px;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+        .save-legacy__image__1 {
+            grid-area: save-legacy__image__1;
+            img {
+                height: 308px;
+                max-width: none;
+                width: 150%;
+                margin-left: -50%;
+            }
+        }
+        .save-legacy__image__2 {
+            grid-area: save-legacy__image__2;
+            align-items: flex-end;
+            img {
+                width: 100%;
+                height: 308px;
+            }
+        }
+        .save-legacy__image__3 {
+            grid-area: save-legacy__image__3;
+            align-items: flex-end;
+            img {
+                width: auto;
+                height: 251px;
+            }
+        }
+        .save-legacy__image__4 {
+            grid-area: save-legacy__image__4;
+            img {
+                width: auto;
+                height: 218px;
+            }
+        }
+    }
+    &__figure {
+        position: absolute;
+        z-index: -1;
+        @include media-breakpoint-up(xlg) {
+            left: 55%;
+        }
+        @include media-breakpoint-up(lg) {
+            left: 45%;
+            top: 10%;
+        }
+        @include media-breakpoint-up(xs) {
+            left: 50%;
+            top: 40%;
+        }
+        .figure-svg-base {
+            svg {
+                height: auto;
+                @include media-breakpoint-up(lg) {
+                    width: 426px;
+                }
+                @include media-breakpoint-up(xs) {
+                    width: 250px;
+                }
+            }
+        }
+    }
+}

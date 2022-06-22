@@ -1,0 +1,65 @@
+// Vars site
+@import "__vars";
+// Custom functions bootstrap
+@import "vendor/bootstrap/bootstrap-functions";
+// Fancybox css
+@import "vendor/fancybox.min";
+// Aos css
+@import "vendor/animation";
+// main site styles
+@import "__main";
+
+// ========================================================
+// Import SCSS
+// ========================================================
+@import "components/__header";
+@import "components/__footer";
+@import "components/__partners";
+
+@import "components/home/__hero";
+@import "components/home/__who-is";
+@import "components/home/__text-block";
+@import "components/home/__how-work";
+@import "components/home/__im-nums";
+
+@import "components/fund/__about";
+@import "components/fund/__mission";
+@import "components/fund/__text-bg";
+@import "components/fund/__creators";
+@import "components/fund/__text-figure";
+@import "components/fund/__childhood";
+@import "components/fund/__need-help";
+@import "components/fund/__quote";
+@import "components/fund/__save-legacy";
+@import "components/fund/__history-program";
+@import "components/fund/__video";
+@import "components/fund/__history-temple";
+
+@import "components/give-things/__give-things";
+@import "components/give-things/__how-give";
+@import "components/give-things/__what-give";
+@import "components/give-things/__how-find";
+@import "components/give-things/__where-going";
+@import "components/give-things/__form-give";
+
+@import "components/second-hands/__second-hands";
+@import "components/second-hands/__why-s-h";
+@import "components/second-hands/__loyalty";
+@import "components/second-hands/__social-cards";
+@import "components/second-hands/__addresses";
+
+@import "components/recycling/__recycling";
+@import "components/recycling/__r-text-figure";
+@import "components/recycling/__rags";
+@import "components/recycling/__metals";
+@import "components/recycling/__r-text-bg";
+
+@import "components/__archive-events";
+@import "components/__form-page";
+@import "components/__contacts";
+
+// ========================================================
+// Other components import SCSS
+// ========================================================
+@import "components/__modals";
+@import "components/__to-top";

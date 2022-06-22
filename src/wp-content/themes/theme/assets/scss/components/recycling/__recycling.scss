@@ -1,0 +1,146 @@
+.recycling {
+    position: relative;
+    @include media-breakpoint-up(xlg) {
+        margin-bottom: 220px;
+    }
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 220px;
+    }
+    @include media-breakpoint-up(sm) {
+        margin-bottom: 220px;
+    }
+    @include media-breakpoint-up(xs) {
+        margin-bottom: 163px;
+    }
+    &__wrapper {
+        @include media-breakpoint-up(lg) {
+            padding-top: 34px;
+        }
+        @include media-breakpoint-up(xs) {
+            padding-top: 15px;
+        }
+    }
+    &__headings {
+        display: grid;
+        @include media-breakpoint-up(xlg) {
+            gap: 0 100px;
+        }
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 0 50px;
+        }
+        @include media-breakpoint-up(xs) {
+            grid-template-columns: repeat(minmax(300px, 1fr));
+        }
+    }
+    &__content {
+        @include media-breakpoint-up(xlg) {
+            max-width: 667px;
+        }
+        @include media-breakpoint-up(lg) {
+            max-width: 500px;
+        }
+        @include media-breakpoint-down(md) {
+            margin-bottom: 0;
+        }
+    }
+    &__img {
+        padding-top: 50%;
+        margin-right: -50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include media-breakpoint-down(md) {
+            margin-right: -20%;
+            margin-bottom: 20px;
+        }
+    }
+    &__bg {
+        position: absolute;
+        top: 0;
+        border-radius: 4px;
+        z-index: -2;
+        bottom: 0;
+        @include media-breakpoint-up(lg) {
+            left: -50px;
+            right: -50px;
+        }
+        @include media-breakpoint-up(xs) {
+            right: 0;
+            left: 0;
+        }
+    }
+    &__subheading {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    .container-wrapper {
+        position: relative;
+    }
+    &__figure {
+        position: absolute;
+        z-index: -2;
+        bottom: -150px;
+        right: 123px;
+        @include media-breakpoint-down(md) {
+            right: auto;
+            left: 20%;
+        }
+        svg {
+            width: auto;
+            @include media-breakpoint-up(lg) {
+                height: 447px;
+            }
+            @include media-breakpoint-down(md) {
+                height: 300px;
+            }
+            @include media-breakpoint-down(sm) {
+                height: 220px;
+            }
+        }
+    }
+    &__flex {
+        display: grid;
+        @include media-breakpoint-up(xlg) {
+            gap: 0 100px;
+        }
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 0 50px;
+        }
+        @include media-breakpoint-up(xs) {
+            grid-template-columns: repeat(minmax(300px, 1fr));
+        }
+    }
+    &__nums {
+        @include media-breakpoint-up(lg) {
+            margin-top: 60px;
+        }
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 30px;
+        }
+        @include media-breakpoint-down(md) {
+            order: -1;
+        }
+    }
+    &__imgs {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        &__img {
+            width: 45%;
+            padding-top: 50%;
+            margin-bottom: -28.7%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 4px;
+            &:first-child {
+                margin-right: 10%;
+            }
+            &:last-child {
+                padding-top: 65%;
+            }
+        }
+    }
+}

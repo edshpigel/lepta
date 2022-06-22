@@ -1,0 +1,103 @@
+.what-give {
+    position: relative;
+    @include media-breakpoint-up(lg) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    @include media-breakpoint-up(xs) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    &__grid {
+        display: grid;
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+        @include media-breakpoint-up(xs) {
+            grid-template-columns: repeat(minmax(300px, 1fr));
+            margin-bottom: 40px;
+        }
+    }
+    &__imgs {
+        position: relative;
+        @include media-breakpoint-up(xlg) {
+            margin-left: 150px;
+        }
+        @include media-breakpoint-up(lg) {
+            margin-top: 80px;
+            margin-left: 0;
+            padding-right: 40px;
+        }
+        @include media-breakpoint-down(md) {
+            margin-bottom: 30px;
+        }
+        &__img {
+            position: relative;
+            padding-top: 60%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        &__figure {
+            position: absolute;
+            z-index: -1;
+            @include media-breakpoint-up(lg) {
+                top: -100px;
+                left: -150px;
+            }
+            @include media-breakpoint-up(xs) {
+                top: -50px;
+                left: -100px;
+            }
+            .figure-svg-base {
+                &.figure-select-heart {
+                    transform: rotateZ(20deg);
+                }
+                svg {
+                    width: auto;
+                    @include media-breakpoint-up(lg) {
+                        height: 291px;
+                    }
+                    @include media-breakpoint-up(xs) {
+                        height: 200px;
+                    }
+                }
+            }
+        }
+    }
+    &__content {
+        @include media-breakpoint-up(lg) {
+            padding-left: 40px;
+        }
+        max-width: 578px;
+        font-size: 16px;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 20px;
+            li {
+                display: flex;
+                align-items: flex-start;
+                font-size: 16px;
+                font-weight: bold;
+                margin-bottom: 8px;
+                line-height: 1.2;
+                &:before {
+                    content: "";
+                    width: 4px;
+                    height: 4px;
+                    min-width: 4px;
+                    margin-top: 8px;
+                    border-radius: 50%;
+                    margin-right: 8px;
+                    display: inline-block;
+                    background-color: #A4A545;
+                }
+            }
+        }
+        p {
+            margin-bottom: 1em;
+        }
+    }
+}

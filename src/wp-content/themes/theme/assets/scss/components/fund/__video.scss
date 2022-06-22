@@ -1,0 +1,67 @@
+.b-video {
+    @include media-breakpoint-up(lg) {
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+    @include media-breakpoint-up(xs) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    &__wrapper {
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include media-breakpoint-up(lg) {
+            padding: 170px 30px;
+        }
+        @include media-breakpoint-up(xs) {
+            padding: 20% 20px;
+        }
+        > svg {
+            height: auto;
+            @include media-breakpoint-up(md) {
+                width: 140px;
+            }
+            @include media-breakpoint-up(xs) {
+                width: 80px;
+            }
+        }
+    }
+    .container-wrapper {
+        @include media-breakpoint-down(sm) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    &__figure {
+        position: absolute;
+        z-index: -1;
+        @include media-breakpoint-up(xlg) {
+            left: -20%;
+            top: -30%;
+        }
+        @include media-breakpoint-up(xs) {
+            left: -15%;
+            top: -20%;
+        }
+        .figure-svg-base {
+            svg {
+                height: auto;
+                @include media-breakpoint-up(xlg) {
+                    width: 580px;
+                }
+                @include media-breakpoint-up(lg) {
+                    width: 400px;
+                }
+                @include media-breakpoint-up(xs) {
+                    width: 80%;
+                }
+            }
+        }
+    }
+}

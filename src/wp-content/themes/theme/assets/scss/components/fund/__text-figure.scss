@@ -1,0 +1,28 @@
+.text-figure {
+    @include media-breakpoint-up(lg) {
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+    @include media-breakpoint-up(xs) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    &__wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h2 {
+            text-align: center;
+            margin-top: 0.67em;
+        }
+        &__figure {
+            position: absolute;
+            z-index: -1;
+            svg {
+                width: auto;
+                height: 183px;
+            }
+        }
+    }
+}

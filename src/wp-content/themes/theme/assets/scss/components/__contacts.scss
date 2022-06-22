@@ -1,0 +1,208 @@
+.page-contacts {
+    .container-wrapper {
+        position: relative;
+    }
+    &__wrapper {
+        @include media-breakpoint-up(lg) {
+            padding-top: 34px;
+            margin-bottom: 60px;
+        }
+        @include media-breakpoint-up(xs) {
+            padding-top: 20px;
+            margin-bottom: 30px;
+        }
+    }
+    &__bg {
+        position: absolute;
+        inset: 0 0 0 0;
+        background-position: center;
+        background-repeat: repeat-y;
+        background-size: 100% auto;
+        z-index: -1;
+        top: 0;
+        opacity: 0.4;
+        max-height: 420px;
+    }
+    &__headings {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 70px;
+        }
+        @include media-breakpoint-up(xs) {
+            margin-bottom: 40px;
+        }
+        @include media-breakpoint-down(md) {
+            flex-wrap: wrap;
+        }
+        h2 {
+            margin-bottom: 15px;
+        }
+    }
+    &__group {
+        max-width: 1104px;
+        border-radius: 25px;
+        background: white;
+        padding: 11px;
+        margin-top: 64px;
+        @include media-breakpoint-down(md) {
+            margin-top: 30px;
+        }
+        &__upper {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            svg {
+                margin-right: 19px;
+            }
+            &__heading {
+                font-weight: 600;
+            }
+            &__subheading {
+                color: #bf95bf;
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+        &__lower {
+            height: 190px;
+            border-radius: 19px;
+            overflow: hidden;
+            margin-top: 9px;
+            #map-footer {
+                height: 100%;
+                width: 100%;
+                [class*="ymaps-2"][class*="-ground-pane"] {
+                    filter: grayscale(1);
+                }
+                .ymaps-2-1-79-zoom {
+                    display: flex;
+                    align-items: stretch;
+                    justify-content: flex-end;
+                    .ymaps-2-1-79-zoom__plus,
+                    .ymaps-2-1-79-zoom__minus {
+                        height: 40px;
+                        padding-left: 38px;
+                        border-radius: 7px;
+                        position: relative !important;
+                        .ymaps-2-1-79-zoom__icon {
+                            height: 30px;
+                            width: 28px;
+                        }
+                    }
+                    .ymaps-2-1-79-zoom__plus {
+                        .ymaps-2-1-79-zoom__icon {
+                            background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.5 6.125C13.5 5.84886 13.2761 5.625 13 5.625C12.7239 5.625 12.5 5.84886 12.5 6.125V12.5H6.125C5.84886 12.5 5.625 12.7239 5.625 13C5.625 13.2761 5.84886 13.5 6.125 13.5H12.5V19.875C12.5 20.1511 12.7239 20.375 13 20.375C13.2761 20.375 13.5 20.1511 13.5 19.875V13.5H19.875C20.1511 13.5 20.375 13.2761 20.375 13C20.375 12.7239 20.1511 12.5 19.875 12.5H13.5V6.125Z' fill='%23ACB6CB'/%3E%3C/svg%3E%0A");
+                        }
+                    }
+                    .ymaps-2-1-79-zoom__minus {
+                        order: -1;
+                        margin-right: 10px;
+                        .ymaps-2-1-79-zoom__icon {
+                            background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.625 13C5.625 12.7239 5.84886 12.5 6.125 12.5H19.875C20.1511 12.5 20.375 12.7239 20.375 13C20.375 13.2761 20.1511 13.5 19.875 13.5H6.125C5.84886 13.5 5.625 13.2761 5.625 13Z' fill='%23ACB6CB'/%3E%3C/svg%3E%0A");
+                        }
+                    }
+                    .ymaps-2-1-79-float-button {
+                        box-shadow: 2px 2px 14px rgba(38, 50, 77, 0.14);
+                    }
+                }
+            }
+        }
+    }
+    &__personal {
+        &__heading {
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            font-weight: bold;
+            @include media-breakpoint-down(md) {
+                margin-top: 30px;
+            }
+        }
+        &__grid {
+            display: grid;
+            @include media-breakpoint-up(lg) {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 27px 27px;
+            }
+            @include media-breakpoint-up(xs) {
+                grid-template-columns: repeat(minmax(300px, 1fr));
+                gap: 30px;
+                margin-bottom: 40px;
+            }
+        }
+        &__item {
+            background: $white;
+            box-shadow: 4px 4px 50px rgba(38, 50, 77, 0.08);
+            border-radius: 25px;
+            padding: 16px 23px;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: space-between;
+            &__headings {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                position: relative;
+                padding-bottom: 21px;
+                margin-bottom: 21px;
+                flex-grow: 1;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    left: 0;
+                    background: #ebe5ec;
+                    height: 1px;
+                }
+                > div:first-child {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: stretch;
+                    justify-content: space-between;
+                }
+                &__place {
+                    color: #bf95bf;
+                    font-size: 14px;
+                }
+                &__name {
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin-top: 40px;
+                }
+                img {
+                    max-width: 68px;
+                    max-height: 68px;
+                    width: 68px;
+                    height: 68px;
+                }
+            }
+            &__contacts {
+                &__item {
+                    &:last-child {
+                        a {
+                            margin-bottom: 0;
+                        }
+                    }
+                    a {
+                        color: $color-text;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        font-size: 14px;
+                        font-weight: 500;
+                        margin-bottom: 16px;
+                    }
+                    &__dop {
+                        color: #a0adc2;
+                    }
+                    svg {
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+    }
+}

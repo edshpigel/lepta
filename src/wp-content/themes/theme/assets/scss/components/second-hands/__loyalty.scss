@@ -1,0 +1,97 @@
+.loyalty {
+    position: relative;
+    @include media-breakpoint-up(lg) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @include media-breakpoint-up(xs) {
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+
+    &__grid {
+        display: grid;
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+        @include media-breakpoint-up(xs) {
+            grid-template-columns: repeat(minmax(300px, 1fr));
+            margin-bottom: 40px;
+        }
+    }
+    &__content {
+        font-size: 16px;
+    }
+    &__flex {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        img {
+            margin-right: 20px;
+            @include media-breakpoint-down(md) {
+                height: 50px;
+            }
+        }
+        &__heading {
+            text-transform: uppercase;
+            color: #787928;
+            font-weight: bold;
+        }
+        &__subheading {
+            @include media-breakpoint-down(md) {
+                font-size: 14px;
+            }
+        }
+    }
+    &__imgs {
+        position: relative;
+        @include media-breakpoint-up(xlg) {
+            margin-left: 150px;
+        }
+        @include media-breakpoint-up(lg) {
+            margin-left: 50px;
+        }
+        @include media-breakpoint-down(md) {
+            margin-bottom: 30px;
+            order: -1;
+        }
+        &__img {
+            position: relative;
+            padding-top: 60%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 4px;
+            @include media-breakpoint-up(lg) {
+                margin-right: -80px;
+            }
+            @include media-breakpoint-up(xs) {
+                margin-right: -40px;
+            }
+        }
+        &__figure {
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: -40px;
+            .figure-svg-base {
+                svg {
+                    width: auto;
+                    @include media-breakpoint-up(lg) {
+                        height: 369px;
+                    }
+                    @include media-breakpoint-down(md) {
+                        min-width: 190px;
+                        min-height: 190px;
+                        height: 60vw;
+                        width: 60vw;
+                        max-width: 300px;
+                        max-height: 300px;
+                    }
+                }
+            }
+        }
+    }
+}

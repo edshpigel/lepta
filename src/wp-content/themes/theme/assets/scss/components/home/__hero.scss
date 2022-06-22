@@ -1,0 +1,196 @@
+.hero {
+    position: relative;
+    @include media-breakpoint-up(lg) {
+        padding-top: 228px;
+        padding-bottom: 60px;
+    }
+    @include media-breakpoint-up(md) {
+        padding-top: 118px;
+        padding-bottom: 40px;
+    }
+    @include media-breakpoint-up(xs) {
+        padding-top: 60px;
+        padding-bottom: 20px;
+    }
+    &__bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -2;
+        filter: brightness(0.9);
+    }
+    &__content {
+        color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include media-breakpoint-down(md) {
+            flex-wrap: wrap-reverse;
+            justify-content: flex-end;
+        }
+        @include media-breakpoint-down(md) {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+        }
+        &__headings {
+            position: relative;
+            @include media-breakpoint-down(md) {
+                width: 100%;
+            }
+            h4 {
+                @include media-breakpoint-up(xlg) {
+                    margin-bottom: 135px;
+                }
+                @include media-breakpoint-up(lg) {
+                    margin-bottom: 100px;
+                }
+                @include media-breakpoint-up(xs) {
+                    margin-bottom: 60px;
+                }
+            }
+            .figure-svg-base {
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                @include media-breakpoint-up(lg) {
+                    top: -23px;
+                    right: -45px;
+                }
+                @include media-breakpoint-down(md) {
+                    left: -30px;
+                }
+                svg {
+                    @include media-breakpoint-up(lg) {
+                        height: 360px;
+                    }
+                    @include media-breakpoint-up(xs) {
+                        height: 250px;
+                        width: auto;
+                    }
+                }
+            }
+        }
+        &__video {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 29px 28px 30px 33px;
+            @include media-breakpoint-up(xl) {
+                margin-right: 0;
+            }
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 83px;
+                margin-right: 80px;
+            }
+            &__text {
+                position: absolute;
+                inset: 0 0 0 0;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                animation: videopresHero 10s linear infinite;
+                transition: $trsn;
+            }
+            &:hover {
+                .hero__content__video__text {
+                    inset: -10px -10px -10px -10px;
+                }
+            }
+        }
+    }
+    &__btns {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+            align-items: flex-start;
+            .btn {
+                margin-bottom: 20px;
+            }
+        }
+        & > * {
+            @include media-breakpoint-down(md) {
+                order: 1;
+            }
+        }
+        &__to-next {
+            @include media-breakpoint-down(md) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 20px 0;
+                padding: 15px 0;
+                order: 10;
+                width: 100%;
+            }
+        }
+        .to-next-section {
+            cursor: pointer;
+            animation: tonextsectionHero 4s ease-in-out infinite;
+        }
+        .fixed-blocks {
+            visibility: hidden;
+            position: fixed;
+            bottom: 5px;
+            left: 5px;
+            opacity: 0;
+            transition: $trsn;
+            z-index: 90;
+            transform: translateY(100%);
+            max-width: calc(100% - 75px);
+            @include media-breakpoint-up(lg) {
+                max-width: calc(100% - 200px);
+                bottom: 20px;
+                right: 200px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            a:first-child {
+                margin-bottom: 5px;
+            }
+            a {
+                @include media-breakpoint-down(xs) {
+                    padding: 12px 17px 12px;
+                    font-size: 12px;
+                }
+            }
+            &.fixed {
+                @include media-breakpoint-up(xs) {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0%);
+                }
+            }
+        }
+    }
+}
+
+@keyframes videopresHero {
+    0% {
+        transform: rotateZ(0);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes tonextsectionHero {
+    0% {
+        transform: translateY(-15px);
+    }
+    75% {
+        transform: translateY(15px);
+    }
+    100% {
+        transform: translateY(-15px);
+    }
+}

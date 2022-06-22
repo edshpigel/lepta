@@ -1,0 +1,111 @@
+.rags {
+    position: relative;
+    @include media-breakpoint-up(lg) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    @include media-breakpoint-up(xs) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    &__grid {
+        display: grid;
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+        @include media-breakpoint-up(xs) {
+            grid-template-columns: repeat(minmax(300px, 1fr));
+            margin-bottom: 40px;
+        }
+    }
+    &__imgs {
+        position: relative;
+        @include media-breakpoint-up(lg) {
+            margin-left: 0;
+            padding-right: 40px;
+            padding-left: 100px;
+        }
+        @include media-breakpoint-down(md) {
+            margin-left: 0;
+            margin-bottom: 30px;
+        }
+        &__img {
+            position: relative;
+            padding-top: 40%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 4px;
+            &:first-child {
+                @include media-breakpoint-up(lg) {
+                    margin-left: -40%;
+                    margin-bottom: 40px;
+                    margin-right: 20%;
+                }
+                @include media-breakpoint-down(md) {
+                    margin-left: -20%;
+                    margin-bottom: 20px;
+                    margin-right: 20%;
+                }
+            }
+        }
+        &__figure {
+            position: absolute;
+            z-index: -1;
+            @include media-breakpoint-up(lg) {
+                top: -10%;
+                right: 10%;
+                left: auto;
+            }
+            @include media-breakpoint-up(xs) {
+                right: auto;
+                top: 10%;
+                left: 20%;
+            }
+            .figure-svg-base {
+                &.figure-select-heart_pattern {
+                    transform: rotateZ(-25deg);
+                }
+                svg {
+                    width: auto;
+                    @include media-breakpoint-up(xlg) {
+                        height: 540px;
+                    }
+                    @include media-breakpoint-up(lg) {
+                        height: 350px;
+                    }
+                    @include media-breakpoint-up(xs) {
+                        height: 200px;
+                    }
+                }
+            }
+        }
+    }
+    &__content {
+        @include media-breakpoint-up(lg) {
+            padding-left: 40px;
+        }
+        max-width: 578px;
+        font-size: 16px;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 30px;
+            li {
+                display: flex;
+                align-items: flex-start;
+                font-size: 16px;
+                font-weight: bold;
+                margin-bottom: 8px;
+                line-height: 1.2;
+            }
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        .btn {
+            margin-top: 30px;
+        }
+    }
+}

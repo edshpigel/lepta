@@ -1,0 +1,89 @@
+.mission {
+    position: relative;
+    @include media-breakpoint-up(lg) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @include media-breakpoint-up(xs) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    h2 {
+        margin-bottom: 37px;
+        @include media-breakpoint-down(md) {
+            margin-bottom: 30px;
+        }
+    }
+    h4 {
+        font-weight: bold;
+        margin-bottom: 46px;
+        @include media-breakpoint-down(md) {
+            margin-bottom: 35px;
+        }
+    }
+    .container-wrapper {
+        position: relative;
+    }
+    &__texts {
+        display: grid;
+        @include media-breakpoint-up(md) {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+        @include media-breakpoint-up(xs) {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            margin-bottom: 40px;
+            grid-column-gap: 30px;
+        }
+        > * {
+            font-size: 16px;
+            margin-bottom: 1em;
+            @include media-breakpoint-up(lg) {
+                position: relative;
+            }
+        }
+    }
+    &__figure {
+        &__1 {
+            position: absolute;
+            right: calc(100% - 133px - 120px);
+            top: -80px;
+            z-index: -1;
+            @include media-breakpoint-down(lg) {
+                right: calc(100% - 200px);
+            }
+            @include media-breakpoint-down(md) {
+                right: calc(100% - 150px);
+            }
+            svg {
+                width: auto;
+                @include media-breakpoint-down(lg) {
+                    height: 200px;
+                }
+            }
+        }
+        &__2 {
+            position: absolute;
+            z-index: -1;
+            transform: rotateZ(-25deg);
+            @include media-breakpoint-up(xlg) {
+                bottom: 40px;
+            }
+            @include media-breakpoint-up(lg) {
+                bottom: 60px;
+            }
+            @include media-breakpoint-down(lg) {
+                bottom: 50%;
+                right: 0;
+            }
+            svg {
+                width: auto;
+                @include media-breakpoint-up(xlg) {
+                    height: 333.87px;
+                }
+                @include media-breakpoint-up(lg) {
+                    height: 280px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,106 @@
+.metals {
+    position: relative;
+    @include media-breakpoint-up(lg) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    @include media-breakpoint-up(xs) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    &__grid {
+        display: grid;
+        align-items: flex-start;
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+        @include media-breakpoint-up(xs) {
+            grid-template-columns: repeat(minmax(300px, 1fr));
+            margin-bottom: 40px;
+        }
+    }
+    &__imgs {
+        position: relative;
+        @include media-breakpoint-down(lg) {
+            padding-left: 30px;
+        }
+        @include media-breakpoint-down(md) {
+            margin-left: 0;
+            margin-bottom: 30px;
+            padding-left: 0;
+            order: -1;
+        }
+        &__img {
+            position: relative;
+            padding-top: 50%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 4px;
+            margin-right: -20%;
+        }
+        &__figure {
+            position: absolute;
+            z-index: -1;
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+            @include media-breakpoint-up(xlg) {
+                top: 70%;
+                right: 75%;
+            }
+            @include media-breakpoint-up(lg) {
+                top: 93%;
+                right: 33%;
+            }
+            @include media-breakpoint-up(xs) {
+                top: 50%;
+                right: 90%;
+            }
+            .figure-svg-base {
+                &.figure-select-hanger {
+                    transform: rotateY(180deg);
+                }
+                svg {
+                    width: auto;
+                    @include media-breakpoint-up(xlg) {
+                        height: 204.82px;
+                    }
+                    @include media-breakpoint-up(lg) {
+                        height: 160px;
+                    }
+                    @include media-breakpoint-up(xs) {
+                        height: 150px;
+                    }
+                }
+            }
+        }
+    }
+    &__content {
+        @include media-breakpoint-up(lg) {
+            padding-left: 40px;
+        }
+        max-width: 578px;
+        font-size: 16px;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 30px;
+            li {
+                display: flex;
+                align-items: flex-start;
+                font-size: 16px;
+                font-weight: bold;
+                margin-bottom: 8px;
+                line-height: 1.2;
+            }
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        .btn {
+            margin-top: 30px;
+        }
+    }
+}

@@ -1,0 +1,107 @@
+.need-help {
+    position: relative;
+    overflow: hidden;
+    @include media-breakpoint-up(lg) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @include media-breakpoint-up(xs) {
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+    &__group {
+        position: relative;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include media-breakpoint-up(lg) {
+            padding: 0 80px;
+        }
+        @include media-breakpoint-down(md) {
+            flex-wrap: wrap-reverse;
+        }
+    }
+    &__swiper {
+        overflow: hidden;
+        max-width: 900px;
+        @include media-breakpoint-down(md) {
+            margin-top: 20px;
+        }
+    }
+    &__item {
+        overflow: hidden;
+        &__grid {
+            @include media-breakpoint-up(md) {
+                display: grid;
+                align-items: flex-start;
+                grid-template-columns: minmax(300px, 308px) minmax(300px, 1fr);
+            }
+            @include media-breakpoint-up(xs) {
+                grid-template-columns: minmax(300px, 308px) minmax(500px, 1fr);
+                grid-column-gap: 60px;
+                margin-bottom: 40px;
+            }
+            &__wrapper {
+                position: relative;
+                &__img {
+                    padding-top: 100%;
+                    position: relative;
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    position: relative;
+                    z-index: 1;
+                    margin-bottom: 50px;
+                }
+                &__figure {
+                    position: absolute;
+                    bottom: -30px;
+                    @include media-breakpoint-up(md) {
+                        right: -30px;
+                    }
+                    @include media-breakpoint-up(xs) {
+                        right: 20px;
+                    }
+                    z-index: 2;
+                    width: 110px;
+                    transform: rotateZ(25deg);
+                    .figure-svg-base {
+                        &:not(.figure-select-heart) {
+                            transform: rotateZ(-25deg);
+                        }
+                    }
+                    svg {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+            &__content {
+                @include media-breakpoint-down(sm) {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                }
+                &__text {
+                    @include media-breakpoint-down(sm) {
+                        text-align: center;
+                    }
+                    h4 {
+                        font-weight: $bold;
+                        color: $color-text;
+                        text-transform: uppercase;
+                    }
+                    p {
+                        font-size: 16px;
+                        margin-bottom: 1em;
+                    }
+                }
+                .btn {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

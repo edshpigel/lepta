@@ -1,0 +1,178 @@
+.give-things {
+    position: relative;
+    @include media-breakpoint-up(xlg) {
+        margin-bottom: 300px;
+    }
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 220px;
+    }
+    @include media-breakpoint-up(sm) {
+        margin-bottom: 50px;
+    }
+    @include media-breakpoint-up(xs) {
+        margin-bottom: 20px;
+    }
+    &__wrapper {
+        @include media-breakpoint-up(lg) {
+            padding-top: 34px;
+        }
+        @include media-breakpoint-up(xs) {
+            padding-top: 15px;
+        }
+        @include media-breakpoint-down(md) {
+            padding-bottom: 20px;
+        }
+    }
+    &__flex {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        @include media-breakpoint-up(xlg) {
+            margin-bottom: -100px;
+        }
+        @include media-breakpoint-up(lg) {
+            margin-bottom: -20px;
+        }
+        @include media-breakpoint-down(md) {
+            flex-wrap: wrap;
+        }
+    }
+    &__headings {
+        @include media-breakpoint-up(lg) {
+            width: 50%;
+            max-width: 50%;
+        }
+        @include media-breakpoint-only(lg) {
+            padding-right: 20px;
+        }
+        @include media-breakpoint-up(xs) {
+            width: 100%;
+            max-width: 100%;
+        }
+        @include media-breakpoint-down(md) {
+            margin-bottom: 30px;
+        }
+    }
+    &__imgs {
+        @include media-breakpoint-up(lg) {
+            width: 50%;
+            max-width: 50%;
+            margin-bottom: -100px;
+        }
+        @include media-breakpoint-only(lg) {
+            padding-left: 20px;
+        }
+        @include media-breakpoint-up(xs) {
+            width: 100%;
+            max-width: 100%;
+        }
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        &__1,
+        &__2 {
+            position: relative;
+            @include media-breakpoint-up(lg) {
+                padding-top: 64%;
+                width: 45%;
+            }
+            @include media-breakpoint-down(md) {
+                padding-top: 50%;
+                width: calc(50% - 10px);
+            }
+            &__img {
+                position: absolute;
+                border-radius: 4px;
+                inset: 0 0 0 0;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+        &__1 {
+            @include media-breakpoint-up(lg) {
+                padding-top: 59%;
+                margin-top: 100px;
+            }
+        }
+        &__3 {
+            margin-left: -25%;
+            width: 55%;
+            position: relative;
+            padding-top: 10%;
+            height: 80px;
+            @include media-breakpoint-down(md) {
+                margin-left: 0;
+                width: 100%;
+                margin-top: 20px;
+                height: auto;
+                padding-top: 50%;
+            }
+            &__img {
+                position: absolute;
+                border-radius: 4px;
+                inset: 0 0 -200% 0;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                @include media-breakpoint-down(md) {
+                    inset: 0 0 0 0;
+                }
+            }
+        }
+    }
+    &__bg {
+        position: absolute;
+        top: 0;
+        border-radius: 4px;
+        z-index: -3;
+        bottom: 0;
+        @include media-breakpoint-up(lg) {
+            left: -50px;
+            right: -50px;
+        }
+        @include media-breakpoint-up(xs) {
+            right: 0;
+            left: 0;
+        }
+    }
+    &__subheading {
+        font-size: 16px;
+        max-width: 493px;
+    }
+    .container-wrapper {
+        position: relative;
+        @include media-breakpoint-only(lg) {
+            padding-left: 70px;
+            padding-right: 70px;
+        }
+    }
+    &__figure {
+        position: absolute;
+        z-index: -1;
+        @include media-breakpoint-up(lg) {
+            top: 95%;
+            left: 20%;
+        }
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+        .figure-svg-base {
+            svg {
+                width: auto;
+                @include media-breakpoint-up(xlg) {
+                    height: 312px;
+                }
+                @include media-breakpoint-up(lg) {
+                    height: 220px;
+                }
+                @include media-breakpoint-down(md) {
+                    height: 200px;
+                }
+                @include media-breakpoint-down(sm) {
+                    height: 120px;
+                }
+            }
+        }
+    }
+}

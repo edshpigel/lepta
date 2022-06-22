@@ -1,0 +1,42 @@
+.partners {
+    @include media-breakpoint-up(lg) {
+        margin-top: 30px;
+        padding-top: 70px;
+        padding-bottom: 60px;
+    }
+    @include media-breakpoint-up(xs) {
+        margin-top: 15px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    background-color: $primary-1;
+    color: $color-text;
+    overflow: hidden;
+    h2 {
+        margin-bottom: 40px;
+    }
+    &__swiper {
+        @include media-breakpoint-up(sm) {
+            overflow: hidden;
+        }
+        position: relative;
+    }
+    &__item {
+        background-color: $primary-1;
+        &__img {
+            display: block;
+            height: 120px;
+            width: 120px;
+            filter: opacity(0.6) saturate(0);
+            opacity: 0.6;
+            background-blend-mode: multiply;
+            transition: $trsn;
+            cursor: pointer;
+            &:hover {
+                filter: opacity(1) saturate(1);
+                opacity: 1;
+                background-blend-mode: normal;
+            }
+        }
+    }
+}
